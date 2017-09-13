@@ -15,21 +15,21 @@ public class Doors : MonoBehaviour {
 	void Update () 
 	{
 		//openNo set in Unity inspector
-		//for red gates
-		if (red && openNo <= PlayerManager.Get ().stats.Red) 
+		//for red gates (19-22).
+		if (red && openNo <= PlayerManager.Get ().stats.Red) //PickupRed
 		{
 			other.gameObject.SetActive(false);
 		}
 
-		//for yellow gates
-		if (yellow && openNo <= PlayerManager.Get ().stats.Yellow) 
-		{
+        //for yellow gates (19-22).
+        if (yellow && openNo <= PlayerManager.Get ().stats.Yellow) //PickupYellow
+        {
 			other.gameObject.SetActive(false);
 		}
 
-		//for green gates
-		if (green && openNo <= PlayerManager.Get ().stats.Green) 
-		{
+        //for green gates (19-22).
+        if (green && openNo <= PlayerManager.Get ().stats.Green) //PickupGreen
+        {
 			other.gameObject.SetActive(false);
 		}
 	}
