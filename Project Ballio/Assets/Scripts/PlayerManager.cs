@@ -1,9 +1,12 @@
 ﻿/*
  * This will be a singleton class, meaning only 1 should exist in the game
  * at a time. The purpose is to store any data we need across levels
- * or by different scripts e.g. Health, Attack Power, pick ups, etc
+ * or by different scripts e.g. Health, Attack Power, pick ups, etc.
+ * All pick ups are created in the stats script and controlled by the player manager script, other scripts such as doors will call on the player manager when using pick ups.
  */
- public class PlayerManager
+
+
+public class PlayerManager
 {
     //this is the singleton instance
     private static PlayerManager self;

@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
+        //All pick ups are created in the stats script and controlled by the player manager script, other scripts such as doors will call on the player manager when using pick ups.
+
         //pick up yellow item and add 1 to the stats counter through the PlayerManager
 		if (other.gameObject.CompareTag("Pickup Yellow"))
           {
