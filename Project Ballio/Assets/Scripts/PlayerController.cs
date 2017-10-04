@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 	public float jumpSpeed;     //Intensity of player's jump.
 	public float B_jumpSpeed;
 
-	bool canJump;               //Bool used to stop the player from jumping in mid air...
+	bool canJump;               //Bool used to stop the player from jumping in mid air
 	bool charging;              //Used for the charge float value.
 	bool onCharge;              //Bool for checking whether or not the player is on a charge pad.
 	bool ChargeRIM;             //Checks if the released charge is "in motion" (time between Z release and ChargeRoutine ending).
@@ -77,14 +77,12 @@ public class PlayerController : MonoBehaviour
 			rb.AddForce(Vector3.up * jumpSpeed); 
 			//we have jumped so dont let us do it again in the air
 			canJump = false;
-			//start a co routine to dictate when to turn jump back on
-			StartCoroutine(JumpRoutine());
 		}
 		/* checks if player is pressing 'Z' and is on a charge pad, if true then the
 		 * player stops moving via speed values set to 0 and charge float rises
 		 * until it reaches chargeMax or until the player releases 'Z' [87-95].
 		*/ 
-		if (Input.GetKey(KeyCode.Z) && onCharge) //Charge03
+		if (Input.GetButton("Fire1") && onCharge) //Charge03
 		{
 			charging = true;
 			speed = 0;
@@ -98,7 +96,7 @@ public class PlayerController : MonoBehaviour
 		 * is set to false to make the charge go down again and the ChargeRoutine is initiated.
 		 * meaning the player can't move until the ChargeRoutine timer is done [101-106] ChargeRoutine [195-206].
 		*/
-		if (Input.GetKeyUp(KeyCode.Z) && onCharge) //Charge04
+		if (Input.GetButtonUp("Fire1") && onCharge) //Charge04
 		{
 			rb.AddForce(new Vector3(charge * (10 * H_Move), 0, charge * (10 * V_Move)));
 			StartCoroutine(ChargeRoutine());
@@ -147,33 +145,39 @@ public class PlayerController : MonoBehaviour
 		 * V_Move: -1 = Back, 0 = N/A, 1 = Forward.
 		 * onCharge is also set to true to enable the charge to initiate on 'Z' press.
 		*/
-		CP = Other.gameObject.transform.position;
 
 		if (Other.gameObject.CompareTag("Charge Pad Up")) //ChargePad01
 		{
 			onCharge = true;
 			H_Move = 0;
 			V_Move = 1;
-		}
+            CP = Other.gameObject.transform.position;
+        }
 		if (Other.gameObject.CompareTag("Charge Pad Down")) //ChargePad02
 		{
 			onCharge = true;
 			H_Move = 0;
 			V_Move = -1;
-		}
+            CP = Other.gameObject.transform.position;
+        }
 		if (Other.gameObject.CompareTag("Charge Pad Left")) //ChargePad03
 		{
 			onCharge = true;
 			H_Move = -1;
 			V_Move = 0;
-		}
+            CP = Other.gameObject.transform.position;
+        }
 		if (Other.gameObject.CompareTag("Charge Pad Right")) //ChargePad04
 		{
 			onCharge = true;
 			H_Move = 1;
 			V_Move = 0;
-		}
-
+            CP = Other.gameObject.transform.position;
+        }
+        if (Other.gameObject.CompareTag("Ground"))
+        {
+            canJump = true;
+        }
 	}
 	void OnCollisionExit(Collision Other)
 	{
@@ -183,13 +187,6 @@ public class PlayerController : MonoBehaviour
 			onCharge = false;
 					CP =new Vector3(0, 10, 0);
 		}
-	}
-	//this co-routine dictates when the jump mechanic is turned back on [188-193].
-	private IEnumerator JumpRoutine()
-	{
-		yield return new WaitForSeconds (jumpDelay); //how long until the player can jump again.
-
-		canJump = true; //jump is enabled again
 	}
 	//this co-routine dictates when the player can move again after using the charge [195-206].
 	private IEnumerator ChargeRoutine()
