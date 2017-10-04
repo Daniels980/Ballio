@@ -178,6 +178,11 @@ public class PlayerController : MonoBehaviour
         {
             canJump = true;
         }
+        if (Other.gameObject.CompareTag("Sand"))
+        {
+            speed = speed / 2;
+            jumpSpeed = jumpSpeed / 2;
+        }
 	}
 	void OnCollisionExit(Collision Other)
 	{
@@ -187,7 +192,12 @@ public class PlayerController : MonoBehaviour
 			onCharge = false;
 					CP =new Vector3(0, 10, 0);
 		}
-	}
+        if (Other.gameObject.CompareTag("Sand"))
+        {
+            speed = B_speed;
+            speed = B_jumpSpeed;
+        }
+    }
 	//this co-routine dictates when the player can move again after using the charge [195-206].
 	private IEnumerator ChargeRoutine()
 	{
