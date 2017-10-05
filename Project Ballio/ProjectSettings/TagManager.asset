@@ -13,6 +13,8 @@ TagManager:
   - Charge Pad Down
   - Charge Pad Left
   - Charge Pad Right
+  - Pick Up
+  - Ground
   layers:
   - Default
   - TransparentFX
