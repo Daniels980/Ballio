@@ -15,8 +15,10 @@ public class PlayerController : MonoBehaviour
 	bool charging;              //Used for the charge float value.
 	bool onCharge;              //Bool for checking whether or not the player is on a charge pad.
 	bool ChargeRIM;             //Checks if the released charge is "in motion" (time between Z release and ChargeRoutine ending).
+	bool Falling;               //Checks if player is falling, if true then falling force is applied.
 
-	private float jumpDelay;    //How long in seconds until the player can jump again...
+	public float jumpDelay;     //How long in seconds until the player can jump again...
+	public float fallDelay;     //how long in seconds until falling force is applied.
 	public float chargeDelay;   //How long after charge release until player can move again.
 	private float charge;       //How much charge the player currently has.
 	public float chargeMax;     //How much charge the player can have.
@@ -79,6 +81,7 @@ public class PlayerController : MonoBehaviour
 			canJump = false;
 			//start a co routine to dictate when to turn jump back on
 			StartCoroutine(JumpRoutine());
+			StartCoroutine(FallRoutine());
 		}
 		/* checks if player is pressing 'Z' and is on a charge pad, if true then the
 		 * player stops moving via speed values set to 0 and charge float rises
@@ -203,5 +206,10 @@ public class PlayerController : MonoBehaviour
 		//backup floats are used for restoring previous values.
 		speed = B_speed;
 		jumpSpeed = B_jumpSpeed;
+	}
+	private IEnumerator FallRoutine()
+	{
+		yield return new WaitForSeconds(fallDelay);
+		Falling = true;
 	}
 }

@@ -2682,8 +2682,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 60
   B_speed: 60
-  jumpSpeed: 500
-  B_jumpSpeed: 500
+  jumpUp: 500
+  jumpDown: 100
+  B_jumpUp: 500
+  jumpDelay: 1.2
+  FallDelay: 0.8
   chargeDelay: 0
   chargeMax: 2700
   chargeUp: 50
