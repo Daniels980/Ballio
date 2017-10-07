@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 	public float B_speed;       //B_speed and B_jumpSpeed are used to restore speed and jumpSpeed to there original values. 
 	public float jumpSpeed;     //Intensity of player's jump.
 	public float B_jumpSpeed;
+	public string Scene;
 
 	bool canJump;               //Bool used to stop the player from jumping in mid air
 	bool charging;              //Used for the charge float value.
@@ -98,7 +99,7 @@ public class PlayerController : MonoBehaviour
 		*/
 		if (Input.GetButtonUp("Fire1") && onCharge) //Charge04
 		{
-			rb.AddForce(new Vector3(charge * (10 * H_Move), 0, charge * (10 * V_Move)));
+			rb.AddForce(new Vector3(charge * (10 * H_Move), -5, charge * (10 * V_Move)));
 			StartCoroutine(ChargeRoutine());
 			charging = false;
 		}
@@ -132,6 +133,10 @@ public class PlayerController : MonoBehaviour
 			SceneManager.LoadScene("WinScene");
 
 		}
+		if (Other.gameObject.CompareTag ("Respawn"))
+		{
+			SceneManager.LoadScene(Scene);
+		}
 
 		
 	}
@@ -151,38 +156,38 @@ public class PlayerController : MonoBehaviour
 			onCharge = true;
 			H_Move = 0;
 			V_Move = 1;
-            CP = Other.gameObject.transform.position;
-        }
+			CP = Other.gameObject.transform.position;
+		}
 		if (Other.gameObject.CompareTag("Charge Pad Down")) //ChargePad02
 		{
 			onCharge = true;
 			H_Move = 0;
 			V_Move = -1;
-            CP = Other.gameObject.transform.position;
-        }
+			CP = Other.gameObject.transform.position;
+		}
 		if (Other.gameObject.CompareTag("Charge Pad Left")) //ChargePad03
 		{
 			onCharge = true;
 			H_Move = -1;
 			V_Move = 0;
-            CP = Other.gameObject.transform.position;
-        }
+			CP = Other.gameObject.transform.position;
+		}
 		if (Other.gameObject.CompareTag("Charge Pad Right")) //ChargePad04
 		{
 			onCharge = true;
 			H_Move = 1;
 			V_Move = 0;
-            CP = Other.gameObject.transform.position;
-        }
-        if (Other.gameObject.CompareTag("Ground"))
-        {
-            canJump = true;
-        }
-        if (Other.gameObject.CompareTag("Sand"))
-        {
-            speed = speed / 2;
-            jumpSpeed = jumpSpeed / 2;
-        }
+			CP = Other.gameObject.transform.position;
+		}
+		if (Other.gameObject.CompareTag("Ground"))
+		{
+			canJump = true;
+		}
+		if (Other.gameObject.CompareTag("Sand"))
+		{
+			speed = speed / 2;
+			jumpSpeed = jumpSpeed / 2;
+		}
 	}
 	void OnCollisionExit(Collision Other)
 	{
@@ -192,12 +197,12 @@ public class PlayerController : MonoBehaviour
 			onCharge = false;
 					CP =new Vector3(0, 10, 0);
 		}
-        if (Other.gameObject.CompareTag("Sand"))
-        {
-            speed = B_speed;
-            speed = B_jumpSpeed;
-        }
-    }
+		if (Other.gameObject.CompareTag("Sand"))
+		{
+			speed = B_speed;
+			speed = B_jumpSpeed;
+		}
+	}
 	//this co-routine dictates when the player can move again after using the charge [195-206].
 	private IEnumerator ChargeRoutine()
 	{
