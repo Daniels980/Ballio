@@ -12,7 +12,7 @@ public class FinalTime : MonoBehaviour
 	{
 		//this shows the final time achieved at the end of the level
 		TimeShow.text = "Your final time was: " + PlayerManager.Get().stats.Timer;
-
+        
 	}
 
 }
