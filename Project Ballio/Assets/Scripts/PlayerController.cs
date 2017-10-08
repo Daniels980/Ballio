@@ -137,8 +137,17 @@ public class PlayerController : MonoBehaviour
 		{
 			SceneManager.LoadScene(Scene);
 		}
-
-		
+	}
+	void OnTriggerStay (Collider Other)
+	{
+		if (Other.gameObject.CompareTag("Wind"))
+		{
+			rb.AddForce(new Vector3(-1000, 0, 0));
+		}
+		if (Other.gameObject.CompareTag("WindUp"))
+		{
+			rb.AddForce(new Vector3(0, 50, 0));
+		}
 	}
 	//checks if player touching an object via collision.
 	void OnCollisionEnter(Collision Other)

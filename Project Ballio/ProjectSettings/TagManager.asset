@@ -15,6 +15,9 @@ TagManager:
   - Charge Pad Right
   - Pick Up
   - Ground
+  - Wind
+  - Sand
+  - WindUp
   layers:
   - Default
   - TransparentFX
