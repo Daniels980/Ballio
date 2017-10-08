@@ -8,27 +8,27 @@
 
 public class PlayerManager
 {
-    //this is the singleton instance
-    private static PlayerManager self;
+	//this is the singleton instance
+	private static PlayerManager self;
 
-    //Gets the instance, if it doesnt exist it creates one
-    public static PlayerManager Get()
-    {
-        if (self == null)
-            self = new PlayerManager();//it's null so create a new one
+	//Gets the instance, if it doesnt exist it creates one
+	public static PlayerManager Get()
+	{
+		if (self == null)
+			self = new PlayerManager();//it's null so create a new one
 
-        //give us the instance
-        return self;
-    }
+		//give us the instance
+		return self;
+	}
 
-    //player data goes here
-    public Stats stats;
+	//player data goes here
+	public Stats stats;
 
-    //reset the values
-    public void Reset()
-    {
-        //In a singleton stats are set here instead of on the Unity inspector menu
-        stats = new Stats();
+	//reset the values
+	public void Reset()
+	{
+		//In a singleton stats are set here instead of on the Unity inspector menu
+		stats = new Stats();
 		stats.Red =       0;
 		stats.Yellow =    0;
 		stats.Green =     0;
@@ -37,11 +37,11 @@ public class PlayerManager
 		stats.Timer = 		0f;
 
 		stats.TimeFreeze = false;
-    }
+	}
 
-    //constructor, just resets the variables to defaults
-    public PlayerManager()
-    {
-        Reset();
-    }
+	//constructor, just resets the variables to defaults
+	public PlayerManager()
+	{
+		Reset();
+	}
 }

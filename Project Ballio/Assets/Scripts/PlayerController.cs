@@ -123,17 +123,11 @@ public class PlayerController : MonoBehaviour
 			PlayerManager.Get().stats.Green += 1;
 			Other.gameObject.SetActive(false);
 		}
-
-		//pick up the END item and win the game
-		if (Other.gameObject.CompareTag ("Pickup End")) 
-		{
-			//setting the timer to freeze, to be displayed at the end
-			PlayerManager.Get ().stats.TimeFreeze = true;
-			//load the Win scene due to finish condition being met
-			SceneManager.LoadScene("WinScene");
-
-		}
 		if (Other.gameObject.CompareTag ("Respawn"))
+		{
+			SceneManager.LoadScene(Scene);
+		}
+		if (Other.gameObject.CompareTag("Enemy"))
 		{
 			SceneManager.LoadScene(Scene);
 		}

@@ -18,6 +18,7 @@ TagManager:
   - Wind
   - Sand
   - WindUp
+  - Enemy
   layers:
   - Default
   - TransparentFX

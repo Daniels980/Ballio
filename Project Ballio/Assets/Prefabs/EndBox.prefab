@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23987889643862050}
   - component: {fileID: 114981161858551838}
   - component: {fileID: 54083470372132674}
+  - component: {fileID: 114545434114792902}
   m_Layer: 0
   m_Name: EndBox
   m_TagString: Pickup End
@@ -109,6 +110,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114545434114792902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1690820893864816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664303f04e9fefc47a480066435eb5fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextLevel: 
 --- !u!114 &114981161858551838
 MonoBehaviour:
   m_ObjectHideFlags: 1
