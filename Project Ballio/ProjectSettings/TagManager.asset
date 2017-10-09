@@ -18,14 +18,6 @@ TagManager:
   - Wind
   - Sand
   - WindUp
-  - Enemy
-  - WindForward
-  - WindRight
-  - Teleporter
-  - B_Red
-  - B_Blue
-  - B_Yellow
-  - B_Green
   layers:
   - Default
   - TransparentFX
