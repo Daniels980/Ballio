@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 	public float B_jumpSpeed;
 	public string Scene;
 
+	public GameObject GreenGate;
+
 	bool canJump;               //Bool used to stop the player from jumping in mid air
 	bool charging;              //Used for the charge float value.
 	bool onCharge;              //Bool for checking whether or not the player is on a charge pad.
@@ -122,6 +124,11 @@ public class PlayerController : MonoBehaviour
 		{
 			PlayerManager.Get().stats.Green += 1;
 			Other.gameObject.SetActive(false);
+			if (PlayerManager.Get().stats.Green >=  12)
+			{
+				GreenGate.SetActive(false);
+			}
+
 		}
 		if (Other.gameObject.CompareTag ("Respawn"))
 		{
@@ -141,6 +148,14 @@ public class PlayerController : MonoBehaviour
 		if (Other.gameObject.CompareTag("WindUp"))
 		{
 			rb.AddForce(new Vector3(0, 50, 0));
+		}
+		if (Other.gameObject.CompareTag("WindForward"))
+		{
+			rb.AddForce(new Vector3(0, 0, 1000));
+		}
+		if (Other.gameObject.CompareTag("WindRight"))
+		{
+			rb.AddForce(new Vector3(300, 0, 0));
 		}
 	}
 	//checks if player touching an object via collision.

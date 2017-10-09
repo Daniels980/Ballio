@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HighScores : MonoBehaviour {
+public class HighScores : MonoBehaviour
+{
 
     public Text PT;
     public Text S_Ten;
@@ -18,9 +19,7 @@ public class HighScores : MonoBehaviour {
     public Text S_One;
 
     public float[] Scores;
-
     private bool Checked;
-
     float PlayerScore = PlayerManager.Get().stats.Timer;
 
     void Start()
@@ -68,7 +67,7 @@ public class HighScores : MonoBehaviour {
         {
             for (int i = 9; i >= 8; i--)
             {
-                Scores[i] = Scores[i-1];
+                Scores[i] = Scores[i - 1];
             }
             Scores[7] = PlayerScore;
             Checked = true;
