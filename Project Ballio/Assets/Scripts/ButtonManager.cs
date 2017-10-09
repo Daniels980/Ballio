@@ -32,11 +32,10 @@ public class ButtonManager : MonoBehaviour
 		SceneManager.LoadScene("Level_1.1");
 	}
 
-	/* Waiting on Ricky's Level
-	 * public void OnOneTwo_Clicked() //Loads and starts level 2 world 1 :D
+	public void OnOneTwo_Clicked() //Loads and starts level 2 world 1 :D
 	{
 		SceneManager.LoadScene("Level_1.2");
-	} */
+	}
 
 	public void OnOneThree_Clicked() //Loads and starts level 3 world 1 A bit tougher now!
 	{
@@ -62,13 +61,11 @@ public class ButtonManager : MonoBehaviour
 	{
 		SceneManager.LoadScene("Level_3.1");
 	}
-
-	/*
-	 * Waiting on Ricky's level
+		
 	public void OnThreeTwo_Clicked() //Loads and starts level 2 world 3 Let's get disco dancin'
 	{
 		SceneManager.LoadScene("Level_3.2");
-	} */
+	}
 
 	public void OnThreeThree_Clicked() //Loads and starts level 3 world 3 Are you the disco master?
 	{
