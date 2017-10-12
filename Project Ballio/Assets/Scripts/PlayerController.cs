@@ -49,7 +49,6 @@ public class PlayerController : MonoBehaviour
 		*/
 		if (!charging) charge = charge - chargeDown; //Charge01
 		if (charge <= 0) charge = 0;                 //Charge02
-		Debug.Log(speed + ", " + charge);
 	}
 
 	void FixedUpdate()

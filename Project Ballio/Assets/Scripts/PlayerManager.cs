@@ -34,7 +34,7 @@ public class PlayerManager
 		stats.Green =     0;
 		stats.End =       0;
 
-		stats.Timer = 		0f;
+		stats.Timer = 	  0f;
 
 		stats.TimeFreeze = false;
 	}
