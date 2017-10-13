@@ -49,7 +49,6 @@ public class PlayerController : MonoBehaviour
 		*/
 		if (!charging) charge = charge - chargeDown; //Charge01
 		if (charge <= 0) charge = 0;                 //Charge02
-		Debug.Log(speed + ", " + charge);
 	}
 
 	void FixedUpdate()
@@ -75,6 +74,10 @@ public class PlayerController : MonoBehaviour
 		 * is set to false and the JumpRoutine is initiated, meaning that the player 
 		 * can't jump until the Jumproutine timer is finished [75-82] JumpRoutine [188-193].
 		*/
+		if (Input.GetButton("Cancel"))
+		{
+			SceneManager.LoadScene("LevelSelect");
+		}
 		if (Input.GetButton("Jump") && canJump) //Jump01
 		{
 			rb.AddForce(Vector3.up * jumpSpeed); 
@@ -143,7 +146,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if (Other.gameObject.CompareTag("Wind"))
 		{
-			rb.AddForce(new Vector3(-1000, 0, 0));
+			rb.AddForce(new Vector3(-500, 0, 0));
 		}
 		if (Other.gameObject.CompareTag("WindUp"))
 		{
