@@ -53,7 +53,11 @@ public class HighScores : MonoBehaviour
         PT.text = "Player Time: " + PlayerScore; //Shows player's current time on canvas.
 
         //Now we compare the player's current score/time.
-        if (PlayerScore <= Scores[9] && PlayerScore > Scores[8] && !Checked) // if the current player time is less than 10th (element 9) and more than 9th, and hasnt been compared already. Set 10th to player's current score/time.
+
+        /*if the current player time is less than 10th (element 9) and more than 9th, 
+         *and hasnt been compared already. Set 10th to player's current score/time [60-64].
+        */
+        if (PlayerScore <= Scores[9] && PlayerScore > Scores[8] && !Checked)
         {
             Scores[9] = PlayerScore;
             Checked = true;
@@ -66,7 +70,8 @@ public class HighScores : MonoBehaviour
         }
         if (PlayerScore <= Scores[7] && PlayerScore > Scores[6] && !Checked)
         {
-            for (int i = 9; i >= 8; i--) // i = 9, check if i is greater than 8, minus 1 from i, run loop until not true.
+            // i = 9, check if i is greater than 8, minus 1 from i, run loop until not true.
+            for (int i = 9; i >= 8; i--)
             {
                 Scores[i] = Scores[i - 1]; //"Scores" array element "i" equals the element below "i" similar to saying Scores[9] = Scores[8] as above.
             }
