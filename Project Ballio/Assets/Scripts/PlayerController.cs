@@ -27,7 +27,12 @@ public class PlayerController : MonoBehaviour
 	private int H_Move;         //Used to determine which way Horizontally the Charge Pad will move the player.
 	private int V_Move;         //Used to determine which way Vertically the Charge Pad will move the player.
 
-	private Rigidbody rb;       //Player's RigidBody Component, used for movement and charge via adding force.
+    public Transform quitMenu;  //Gets the Quitmenu canvas component 
+    public Transform canvas;    //Gets the Pausemenu canvas component 
+    public Button resume;       //Gets the Resume button component 
+    public Button exit;         //Gets the Exit button component 
+
+    private Rigidbody rb;       //Player's RigidBody Component, used for movement and charge via adding force.
 	private Vector3 CP;         //Used to lock the player to the Charge Pads centre on Z press.
 	void Start()
 	{
@@ -71,14 +76,23 @@ public class PlayerController : MonoBehaviour
 			speed = B_speed;
 			jumpSpeed = B_jumpSpeed;
 		}
-		/* checks if player pressed jump and if the canJump bool is restricting them,
+        /* checks if player pressed jump and if the canJump bool is restricting them,
 		 * if not then AddForce is applied to the Y axis by the jumpSpeed value. canJump 
 		 * is set to false and the JumpRoutine is initiated, meaning that the player 
 		 * can't jump until the Jumproutine timer is finished [75-82] JumpRoutine [188-193].
 		*/
-		if (Input.GetButton("Cancel"))
-		{
-			SceneManager.LoadScene("LevelSelect");
+        if (Input.GetKeyDown(KeyCode.Escape)) //the Pause feature
+        {
+            if (canvas.gameObject.activeInHierarchy == false)
+            {
+                canvas.gameObject.SetActive(true);
+                Time.timeScale = 0;
+            }
+            else
+            {
+                canvas.gameObject.SetActive(false);
+                Time.timeScale = 1;
+            }
 		}
 		if (Input.GetButton("Jump") && canJump) //Jump01
 		{
@@ -212,8 +226,31 @@ public class PlayerController : MonoBehaviour
 					CP =new Vector3(0, 10, 0);
 		}
 	}
-	//this co-routine dictates when the player can move again after using the charge [195-206].
-	private IEnumerator ChargeRoutine()
+    public void resumeback()    //Unpauses the game
+    {
+        canvas.gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void LevelSelectPress()       //Active quit menu and disactive Resume and level select buttons
+    {
+        quitMenu.gameObject.SetActive(true);
+        resume.enabled = false;
+        exit.enabled = false;
+    }
+
+    public void NoPress()       //Disactive quit menu and reactive Resume and level select buttons
+    {
+        quitMenu.gameObject.SetActive(false);
+        resume.enabled = true;
+        exit.enabled = true;
+    }
+    public void YesPress()      //Loads the level select scene
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
+    //this co-routine dictates when the player can move again after using the charge [195-206].
+    private IEnumerator ChargeRoutine()
 	{
 		yield return new WaitForSeconds(chargeDelay); //how long until the player can move again.
 		//all movement is given back to the player.
