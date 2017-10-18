@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 	public float B_speed;       //B_speed and B_jumpSpeed are used to restore speed and jumpSpeed to there original values. 
 	public float jumpSpeed;     //Intensity of player's jump.
 	public float B_jumpSpeed;
-	public string Scene;
+	public string Scene;        //current scene.
 
 	public GameObject GreenGate;
 
@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
 	bool charging;              //Used for the charge float value.
 	bool onCharge;              //Bool for checking whether or not the player is on a charge pad.
 	bool ChargeRIM;             //Checks if the released charge is "in motion" (time between Z release and ChargeRoutine ending).
-	bool onSand;
 
 	private float jumpDelay;    //How long in seconds until the player can jump again...
 	public float chargeDelay;   //How long after charge release until player can move again.
@@ -34,12 +33,15 @@ public class PlayerController : MonoBehaviour
 	private Vector3 CP;         //Used to lock the player to the Charge Pads centre on Z press.
 	void Start()
 	{
+		PlayerManager.Get().stats.Green = 0; // resets values of pickups at start of new scene.
+		PlayerManager.Get().stats.Yellow = 0;
+		PlayerManager.Get().stats.Red = 0;
+
 		rb = GetComponent<Rigidbody>(); //assign RigidBody component to rb Data Type.
 		canJump = true;                 //true on start, so the player can jump from the get go.
 		charging = false;               //false on start since player isn't charging.      
 		onCharge = false;               //false on start since player isn't on charge pad.
 		ChargeRIM = false;              //false on start since charge isn't in motion.
-		onSand = false;
 		jumpDelay = 1.2f;
 		charge = 0;
 		CP =new Vector3(0, 0, 0);
@@ -66,7 +68,7 @@ public class PlayerController : MonoBehaviour
 		 *This is a contermeasure for a charge pad bug which causes charge to be exited and speed
 		 *to be stuck on 0 [65-69].
 		*/
-		if(!onCharge && !ChargeRIM && !onSand)
+		if(!onCharge && !ChargeRIM)
 		{
 			speed = B_speed;
 			jumpSpeed = B_jumpSpeed;
@@ -206,17 +208,6 @@ public class PlayerController : MonoBehaviour
 		{
 			canJump = true;
 		}
-		if (Other.gameObject.CompareTag("Sand"))
-		{
-			onSand = true;
-			speed = speed / 2;
-			jumpSpeed = jumpSpeed / 2;
-			canJump = true;
-		}
-	}
-	void OnCollisionStay(Collision Other)
-	{
-
 	}
 	void OnCollisionExit(Collision Other)
 	{
@@ -225,12 +216,6 @@ public class PlayerController : MonoBehaviour
 		{
 			onCharge = false;
 					CP =new Vector3(0, 10, 0);
-		}
-		if (Other.gameObject.CompareTag("Sand"))
-		{
-			speed = B_speed;
-			jumpSpeed = B_jumpSpeed;
-			onSand = false;
 		}
 	}
 	//this co-routine dictates when the player can move again after using the charge [195-206].
