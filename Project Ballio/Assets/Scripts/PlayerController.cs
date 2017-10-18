@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 	bool charging;              //Used for the charge float value.
 	bool onCharge;              //Bool for checking whether or not the player is on a charge pad.
 	bool ChargeRIM;             //Checks if the released charge is "in motion" (time between Z release and ChargeRoutine ending).
+	bool onSand;
 
 	private float jumpDelay;    //How long in seconds until the player can jump again...
 	public float chargeDelay;   //How long after charge release until player can move again.
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
 		charging = false;               //false on start since player isn't charging.      
 		onCharge = false;               //false on start since player isn't on charge pad.
 		ChargeRIM = false;              //false on start since charge isn't in motion.
+		onSand = false;
 		jumpDelay = 1.2f;
 		charge = 0;
 		CP =new Vector3(0, 0, 0);
@@ -64,7 +66,7 @@ public class PlayerController : MonoBehaviour
 		 *This is a contermeasure for a charge pad bug which causes charge to be exited and speed
 		 *to be stuck on 0 [65-69].
 		*/
-		if(!onCharge && !ChargeRIM)
+		if(!onCharge && !ChargeRIM && !onSand)
 		{
 			speed = B_speed;
 			jumpSpeed = B_jumpSpeed;
@@ -206,9 +208,15 @@ public class PlayerController : MonoBehaviour
 		}
 		if (Other.gameObject.CompareTag("Sand"))
 		{
+			onSand = true;
 			speed = speed / 2;
 			jumpSpeed = jumpSpeed / 2;
+			canJump = true;
 		}
+	}
+	void OnCollisionStay(Collision Other)
+	{
+
 	}
 	void OnCollisionExit(Collision Other)
 	{
@@ -221,7 +229,8 @@ public class PlayerController : MonoBehaviour
 		if (Other.gameObject.CompareTag("Sand"))
 		{
 			speed = B_speed;
-			speed = B_jumpSpeed;
+			jumpSpeed = B_jumpSpeed;
+			onSand = false;
 		}
 	}
 	//this co-routine dictates when the player can move again after using the charge [195-206].
