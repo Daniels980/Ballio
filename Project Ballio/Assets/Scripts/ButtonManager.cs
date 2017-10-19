@@ -9,6 +9,15 @@ public class ButtonManager : MonoBehaviour
 
     //this script is used on the start menu and game over menu. Using buttons and build settings you can seemlessly transition from scene to scene with this type of code.
 
+    public Canvas quitMenu;         //Holds the quit canvas.
+    public Button startText;        //Holds the Start button
+    public Button exitText;         //Holds the Exit button
+
+    private void Start()    //Disables the Quit menu image and the child linked underneath it.
+    {
+        quitMenu.enabled = false;
+    }
+
     //loads the scene containing the gameplay when the applied button is clicked on. This is done by using the SceneManager class (13-16).
     public void OnNewGame_Clicked() //ButtonNG
     {
@@ -22,12 +31,26 @@ public class ButtonManager : MonoBehaviour
 	}
 
 	//Exits the game by using the Application class (26-28).
-	public void OnExit_Clicked() //ButtonExit
+	public void OnExit_Clicked() //Opens quit menu and disactivate Game start and exit button
     {
-		Application.Quit ();
-	}
+        quitMenu.enabled = true;
+        startText.enabled = false;
+        exitText.enabled = false;
+    }
 
-	public void OnOneOne_Clicked() //Loads and starts level 1 world 1 :D
+    public void NoPress()  //Redirect back to main menu and re actives game start and exit button
+    {
+        quitMenu.enabled = false;
+        startText.enabled = true;
+        exitText.enabled = true;
+    }
+
+    public void YesPress()  //Exit Application
+    {
+        Application.Quit();
+    }
+
+    public void OnOneOne_Clicked() //Loads and starts level 1 world 1 :D
 	{
 		SceneManager.LoadScene("Level_1.1");
 	}
