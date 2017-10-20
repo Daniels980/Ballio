@@ -49,17 +49,14 @@ public class PlayerController : MonoBehaviour
 		charge = 0;
 		CP =new Vector3(0, 0, 0);
 	}
-	void Update()
+	void FixedUpdate()
 	{
 		/* uses chargeDown to lower the value of charge when not charging and
 		 * sets lowest possible value of charge to 0 to avoid negative values [47-48]. 
 		*/
 		if (!charging) charge = charge - chargeDown; //Charge01
 		if (charge <= 0) charge = 0;                 //Charge02
-	}
 
-	void FixedUpdate()
-	{
 		float moveHorizontal = Input.GetAxis("Horizontal"); //MoveH
 		float moveVertical = Input.GetAxis("Vertical");     //MoveV
 
@@ -81,7 +78,7 @@ public class PlayerController : MonoBehaviour
 		 * is set to false and the JumpRoutine is initiated, meaning that the player 
 		 * can't jump until the Jumproutine timer is finished [75-82] JumpRoutine [188-193].
 		*/
-        if (Input.GetKeyDown(KeyCode.Escape)) //the Pause feature
+        if (Input.GetButtonDown("Cancel")) //the Pause feature
         {
             if (canvas.gameObject.activeInHierarchy == false)
             {
