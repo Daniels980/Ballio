@@ -612,8 +612,35 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1803195303}
+<<<<<<< HEAD
     - target: {fileID: 1508003370183958, guid: 5ad291b87f6e942499b5c31e1b24665d, type: 2}
       propertyPath: m_IsActive
+=======
+    - target: {fileID: 114134329619699578, guid: 5ad291b87f6e942499b5c31e1b24665d,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5ea95029bf76185468d7438bb0d27280,
+        type: 3}
+    - target: {fileID: 114134329619699578, guid: 5ad291b87f6e942499b5c31e1b24665d,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114134329619699578, guid: 5ad291b87f6e942499b5c31e1b24665d,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114134329619699578, guid: 5ad291b87f6e942499b5c31e1b24665d,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114134329619699578, guid: 5ad291b87f6e942499b5c31e1b24665d,
+        type: 2}
+      propertyPath: m_Color.b
+>>>>>>> 971d2cdeb1ae408a23938f9cf881db6950c7d50c
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
