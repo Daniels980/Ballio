@@ -248,6 +248,7 @@ public class PlayerController : MonoBehaviour
     public void YesPress()      //Loads the level select scene
     {
         SceneManager.LoadScene("LevelSelect");
+		Time.timeScale = 1;
     }
     //this co-routine dictates when the player can move again after using the charge [195-206].
     private IEnumerator ChargeRoutine()
