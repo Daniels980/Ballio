@@ -260,7 +260,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1899200200585822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 64, y: 4, z: -16}
+  m_LocalPosition: {x: -20.29, y: 5.55, z: 24.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4942764017500002}
@@ -286,13 +286,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1371060664392638}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.0018730164, y: -1.9499925, z: -0.024360657}
+  m_LocalRotation: {x: -0.00000024353184, y: -0.7071068, z: -0.70710677, w: 0.00000029802322}
+  m_LocalPosition: {x: 0.0018692017, y: -1.9499929, z: -0.024360657}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4004462286962168}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -180.00002}
 --- !u!4 &4074108567919996
 Transform:
   m_ObjectHideFlags: 1
@@ -500,7 +500,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1340852856803320}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -539,7 +539,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b396fc5b3afd1d248b7e2143f63200cb, type: 2}
+  - {fileID: 2100000, guid: 0bdbdb496a74d7548a45ae3387bea040, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -603,7 +603,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b396fc5b3afd1d248b7e2143f63200cb, type: 2}
+  - {fileID: 2100000, guid: 65af45c4ad87a234292bcbde53257220, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664303f04e9fefc47a480066435eb5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: LevelSelect
+  NextLevel: HighScoreScene
 --- !u!137 &137066842830888670
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -757,7 +757,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b396fc5b3afd1d248b7e2143f63200cb, type: 2}
+  - {fileID: 2100000, guid: 681c77268983c514781beb941cfcda0e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
