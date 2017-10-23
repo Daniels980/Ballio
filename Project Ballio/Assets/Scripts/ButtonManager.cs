@@ -30,6 +30,13 @@ public class ButtonManager : MonoBehaviour
 		SceneManager.LoadScene ("StartMenu");
 	}
 
+	//loads the start menu scene and resets the game timer, when you press the main menu button in the HighScoreScene scene. This is also done by using the SceneManager class (19-22).
+	public void OnMenuTimer_Clicked()    //ButtonMenu, resets the game timer.
+	{
+		SceneManager.LoadScene ("StartMenu");
+		PlayerManager.Get().stats.Timer = 0;
+	}
+
 	//Exits the game by using the Application class (26-28).
 	public void OnExit_Clicked() //Opens quit menu and disactivate Game start and exit button
     {
