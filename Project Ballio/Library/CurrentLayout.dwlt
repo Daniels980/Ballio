@@ -105,6 +105,7 @@ MonoBehaviour:
     x: 0
     y: 30
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1280
     height: 587
   m_MinSize: {x: 681, y: 492}
@@ -112,12 +113,17 @@ MonoBehaviour:
   vertical: 0
   controlID: 1105
 =======
+=======
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
     width: 1366
     height: 635
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
   controlID: 7981
+<<<<<<< HEAD
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
+=======
 >>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
 --- !u!114 &6
 MonoBehaviour:
@@ -138,12 +144,21 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 912
     height: 587
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
   controlID: 1146
+=======
+    width: 1070
+    height: 635
+  m_MinSize: {x: 404, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
+  vertical: 1
+  controlID: 7982
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
 =======
     width: 1070
     height: 635
@@ -171,6 +186,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 912
     height: 224
   m_MinSize: {x: 404, y: 221}
@@ -178,12 +194,17 @@ MonoBehaviour:
   vertical: 0
   controlID: 1147
 =======
+=======
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
     width: 1070
     height: 364
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
   controlID: 7983
+<<<<<<< HEAD
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
+=======
 >>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
 --- !u!114 &8
 MonoBehaviour:
@@ -202,8 +223,13 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 267
     height: 224
+=======
+    width: 237
+    height: 364
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
 =======
     width: 237
     height: 364
@@ -232,8 +258,13 @@ MonoBehaviour:
     x: 237
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 645
     height: 224
+=======
+    width: 833
+    height: 364
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
 =======
     width: 833
     height: 364
@@ -263,10 +294,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 224
     width: 912
     height: 363
 =======
+=======
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
     y: 364
     width: 1070
     height: 271
@@ -332,10 +366,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 238
     width: 910
     height: 345
 =======
+=======
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
     y: 381
     width: 1068
     height: 250
@@ -415,6 +452,7 @@ MonoBehaviour:
     x: 0
     y: 92
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 265
     height: 203
   m_TreeViewState:
@@ -423,6 +461,8 @@ MonoBehaviour:
     m_LastClickedID: 25640
     m_ExpandedIDs: 084cffffc6efffffb6f4ffffd0fbffff00000000ce2f0000ee62000096630000
 =======
+=======
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
     width: 235
     height: 343
   m_TreeViewState:
@@ -430,6 +470,9 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 406ef9ffa4a9f9fffaabf9ffa8b2f9ffcaadfeffcab0feff1ab9feffb6c6feff3a89ffffece3ffffece6ffff000000004e330000a437000028730000fa78000024790000007a0000567e000004ba00005cba0000
+<<<<<<< HEAD
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
+=======
 >>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -478,24 +521,36 @@ MonoBehaviour:
     x: 239
     y: 92
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 641
     height: 203
   m_SceneLighting: 1
   lastFramingTime: 1341.2746131161578
 =======
+=======
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
     width: 829
     height: 343
   m_SceneLighting: 1
   lastFramingTime: 7587.52104012159
+<<<<<<< HEAD
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
+=======
 >>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 8.907919, y: -3.9235077, z: 15.726586}
     speed: 2
     m_Value: {x: 8.907919, y: -3.9235077, z: 15.726586}
+=======
+    m_Target: {x: 5.65625, y: -1.8125, z: 21.95337}
+    speed: 2
+    m_Value: {x: 5.65625, y: -1.8125, z: 21.95337}
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
 =======
     m_Target: {x: 5.65625, y: -1.8125, z: 21.95337}
     speed: 2
@@ -524,6 +579,7 @@ MonoBehaviour:
       m_Value: 0
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 0.23400393, y: -0.7535225, z: 0.5059559, w: 0.3485035}
     speed: 2
     m_Value: {x: 0.23400393, y: -0.7535225, z: 0.5059559, w: 0.3485035}
@@ -532,6 +588,8 @@ MonoBehaviour:
     speed: 2
     m_Value: 34.595108
 =======
+=======
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
     m_Target: {x: 0.25189543, y: -0.63821685, z: 0.23325178, w: 0.6892087}
     speed: 2
     m_Value: {x: 0.25187188, y: -0.6381572, z: 0.23322998, w: 0.68914425}
@@ -539,6 +597,9 @@ MonoBehaviour:
     m_Target: 44.51826
     speed: 2
     m_Value: 44.51826
+<<<<<<< HEAD
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
+=======
 >>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
   m_Ortho:
     m_Target: 1
@@ -649,10 +710,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 316
     width: 910
     height: 342
 =======
+=======
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
     y: 456
     width: 1068
     height: 250
@@ -669,7 +733,11 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets
+=======
+    - Assets/_Scenes
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
 =======
     - Assets/_Scenes
 >>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
@@ -683,9 +751,15 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 20250000
     m_LastClickedID: 9504
     m_ExpandedIDs: 0000000020250000a22700006a2800006e280000c42800001c2900000a2a000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: 3a310000
+    m_LastClickedID: 12602
+    m_ExpandedIDs: 000000004e2e00007a3000007e30000000ca9a3bffffff7f
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
 =======
     m_SelectedIDs: 3a310000
     m_LastClickedID: 12602
@@ -719,7 +793,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000020250000a22700006a2800006e280000c42800001c290000aa2900000a2a000000ca9a3bffffff7f
+=======
+    m_ExpandedIDs: 000000004e2e00007a3000007e30000000ca9a3bffffff7f
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
 =======
     m_ExpandedIDs: 000000004e2e00007a3000007e30000000ca9a3bffffff7f
 >>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
@@ -828,10 +906,13 @@ MonoBehaviour:
     x: 1072
     y: 92
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 366
     height: 566
   m_ScrollPosition: {x: 0, y: 417.95508}
 =======
+=======
+>>>>>>> 77f576f8bd7907ec287de9ff29d2c7c47f76b658
     width: 294
     height: 614
   m_ScrollPosition: {x: 0, y: 0}
