@@ -14,6 +14,20 @@ public class MenuImageChange : MonoBehaviour
             BGimage.sprite = Resources.Load<Sprite>("GOLF");
         }
     }
+
+    public void GolfImage2()   //Change background to the Golf background
+    {
+        {
+            BGimage.sprite = Resources.Load<Sprite>("GOLF2");
+        }
+    }
+
+    public void GolfImage3()   //Change background to the Golf background
+    {
+        {
+            BGimage.sprite = Resources.Load<Sprite>("GOLF3");
+        }
+    }
     public void ToyImage()   //Change background to the Toy background
     {
         {
