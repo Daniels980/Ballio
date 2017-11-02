@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 71e29634099965b4398c08a2fba578ad
+timeCreated: 1508950046
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Haettenschweiler
+  fontNames:
+  - Haettenschweiler
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

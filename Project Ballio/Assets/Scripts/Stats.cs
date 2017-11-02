@@ -14,4 +14,5 @@ public class Stats
 	public float Timer;
 	public float CompletedTime;
 	public bool TimeFreeze;
+    public string PlayerName;
 }

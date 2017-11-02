@@ -12,6 +12,7 @@ public class ButtonManager : MonoBehaviour
     public Canvas quitMenu;         //Holds the quit canvas.
     public Button startText;        //Holds the Start button
     public Button exitText;         //Holds the Exit button
+    public Text inputText;
 
     private void Start()    //Disables the Quit menu image and the child linked underneath it.
     {
@@ -116,4 +117,11 @@ public class ButtonManager : MonoBehaviour
 	{
 		SceneManager.LoadScene("Level_4.3");
 	}
+
+    public void OnEnter_Clicked()
+    {
+        PlayerManager.Get().stats.PlayerName = inputText.text; // Temp now equals the name the player submitted.
+        Debug.Log(PlayerManager.Get().stats.PlayerName);
+        SceneManager.LoadScene("HighScoreScene");
+    }
 }

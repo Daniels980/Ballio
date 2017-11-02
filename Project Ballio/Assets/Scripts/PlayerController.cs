@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
 	bool onCharge;              //Bool for checking whether or not the player is on a charge pad.
 	bool ChargeRIM;             //Checks if the released charge is "in motion" (time between Z release and ChargeRoutine ending).
 
-	private float jumpDelay;    //How long in seconds until the player can jump again...
 	public float chargeDelay;   //How long after charge release until player can move again.
 	private float charge;       //How much charge the player currently has.
 	public float chargeMax;     //How much charge the player can have.
@@ -27,12 +26,14 @@ public class PlayerController : MonoBehaviour
 	private int H_Move;         //Used to determine which way Horizontally the Charge Pad will move the player.
 	private int V_Move;         //Used to determine which way Vertically the Charge Pad will move the player.
 
-    public Transform quitMenu;  //Gets the Quitmenu canvas component 
-    public Transform canvas;    //Gets the Pausemenu canvas component 
-    public Button resume;       //Gets the Resume button component 
-    public Button exit;         //Gets the Exit button component 
+	public Transform quitMenu;  //Gets the Quitmenu canvas component 
+	public Transform canvas;    //Gets the Pausemenu canvas component 
+	public Button resume;       //Gets the Resume button component 
+	public Button exit;         //Gets the Exit button component 
 
-    private Rigidbody rb;       //Player's RigidBody Component, used for movement and charge via adding force.
+	public AudioClip[] pu; //Get the Pick up sound component
+
+	private Rigidbody rb;       //Player's RigidBody Component, used for movement and charge via adding force.
 	private Vector3 CP;         //Used to lock the player to the Charge Pads centre on Z press.
 	void Start()
 	{
@@ -45,18 +46,30 @@ public class PlayerController : MonoBehaviour
 		charging = false;               //false on start since player isn't charging.      
 		onCharge = false;               //false on start since player isn't on charge pad.
 		ChargeRIM = false;              //false on start since charge isn't in motion.
-		jumpDelay = 1.2f;
 		charge = 0;
 		CP =new Vector3(0, 0, 0);
 	}
-	void FixedUpdate()
+
+	// Using Update to avoid slowdown in FixedUpdate (Currently speculation)
+	void Update()
 	{
+		/*if player isn't onCharge and Release isn't in motion, Speed stats stay at base value, 
+		 *This is a contermeasure for a charge pad bug which causes charge to be exited and speed
+		 *to be stuck on 0 [60-64].
+		 */
+		if (!onCharge && !ChargeRIM)
+		{
+			speed = B_speed;
+			jumpSpeed = B_jumpSpeed;
+		}
 		/* uses chargeDown to lower the value of charge when not charging and
-		 * sets lowest possible value of charge to 0 to avoid negative values [47-48]. 
-		*/
+		 * sets lowest possible value of charge to 0 to avoid negative values [68-69]. 
+		 */
 		if (!charging) charge = charge - chargeDown; //Charge01
 		if (charge <= 0) charge = 0;                 //Charge02
-
+	}
+	void FixedUpdate()
+	{
 		float moveHorizontal = Input.GetAxis("Horizontal"); //MoveH
 		float moveVertical = Input.GetAxis("Vertical");     //MoveV
 
@@ -64,42 +77,36 @@ public class PlayerController : MonoBehaviour
 
 		rb.AddForce(movement * speed);                                      //Move02
 
-		/*if player isn't onCharge and Release isn't in motion, Speed stats stay at base value, 
-		 *This is a contermeasure for a charge pad bug which causes charge to be exited and speed
-		 *to be stuck on 0 [65-69].
-		*/
-		if(!onCharge && !ChargeRIM)
+		/* On 'cancel' input pressed (Mapped to 'Esc') Pause UI becomes Active and time scale becomes 0,
+		 * causing everything to stop/pause, if it's already Active however than 'cancel' Deactivates
+		 * the Pause UI and Time scale returns to 1 and gameplay continues [84-96]. 
+		 */ 
+		if (Input.GetButtonDown("Cancel")) // Pause01
 		{
-			speed = B_speed;
-			jumpSpeed = B_jumpSpeed;
+			if (canvas.gameObject.activeInHierarchy == false)
+			{
+				canvas.gameObject.SetActive(true);
+				Time.timeScale = 0;
+			}
+			else
+			{
+				canvas.gameObject.SetActive(false);
+				Time.timeScale = 1;
+			}
 		}
-        /* checks if player pressed jump and if the canJump bool is restricting them,
+		/* checks if player pressed jump and if the canJump bool is restricting them,
 		 * if not then AddForce is applied to the Y axis by the jumpSpeed value. canJump 
-		 * is set to false and the JumpRoutine is initiated, meaning that the player 
-		 * can't jump until the Jumproutine timer is finished [75-82] JumpRoutine [188-193].
-		*/
-        if (Input.GetButtonDown("Cancel")) //the Pause feature
-        {
-            if (canvas.gameObject.activeInHierarchy == false)
-            {
-                canvas.gameObject.SetActive(true);
-                Time.timeScale = 0;
-            }
-            else
-            {
-                canvas.gameObject.SetActive(false);
-                Time.timeScale = 1;
-            }
-		}
+		 * is set to false so the player can't jump again. Can jump becomes true again
+		 * when the player collides with the ground (which is tagged as 'Ground') [102-106].
+		 */
 		if (Input.GetButton("Jump") && canJump) //Jump01
 		{
 			rb.AddForce(Vector3.up * jumpSpeed); 
-			//we have jumped so dont let us do it again in the air
-			canJump = false;
+			canJump = false;            //we have jumped so dont let us do it again in the air
 		}
-		/* checks if player is pressing 'Z' and is on a charge pad, if true then the
+		/* checks if player is pressing 'Fire1' and is on a charge pad, if true then the
 		 * player stops moving via speed values set to 0 and charge float rises
-		 * until it reaches chargeMax or until the player releases 'Z' [87-95].
+		 * until it reaches chargeMax or until the player releases 'Fire1' [111-119].
 		*/ 
 		if (Input.GetButton("Fire1") && onCharge) //Charge03
 		{
@@ -110,10 +117,10 @@ public class PlayerController : MonoBehaviour
 			transform.position = CP + new Vector3 (0, 0.56f, 0);
 			if (charge >= chargeMax) charge = chargeMax;
 		}
-		/*checks if player released 'Z' and is on charge pad, if true then AddForce is
+		/*checks if player released 'Fire1' and is on charge pad, if true then AddForce is
 		 * used to launch the player in a direction depending on the pad they're on. Charging
 		 * is set to false to make the charge go down again and the ChargeRoutine is initiated.
-		 * meaning the player can't move until the ChargeRoutine timer is done [101-106] ChargeRoutine [195-206].
+		 * meaning the player can't move until the ChargeRoutine timer is done [125-131] ChargeRoutine [195-206].
 		*/
 		if (Input.GetButtonUp("Fire1") && onCharge) //Charge04
 		{
@@ -127,25 +134,31 @@ public class PlayerController : MonoBehaviour
 		/*All pick ups are created in the stats script and controlled by the player manager script
 		 *other scripts such as doors will call on the player manager when using pick ups.
 		 */
-
-		//pick up yellow item and add 1 to the stats counter through the PlayerManager
+		/* pick up yellow item and add 1 to the stats counter through the PlayerManager, also deactivates pickup 
+		 * and plays audio clip in 'pu' array that equals the current number of pickups had before collision 
+		 * (e.g. pu[0] plays if player has picked up 0 yellow flags) same is applied to green pickups[141-146].
+		 */
 		if (Other.gameObject.CompareTag("Pickup Yellow"))
-		  {
-			PlayerManager.Get().stats.Yellow += 1;
-			Other.gameObject.SetActive(false);
-		  }
-
-		//pick up green item and add 1 to counter
-		if (Other.gameObject.CompareTag ("Pickup Green")) 
 		{
-			PlayerManager.Get().stats.Green += 1;
+			AudioSource.PlayClipAtPoint(pu[PlayerManager.Get().stats.Yellow], Camera.main.transform.position);
 			Other.gameObject.SetActive(false);
+			PlayerManager.Get().stats.Yellow += 1;
 		}
 
-        if (Other.gameObject.CompareTag ("Respawn"))
+		if (Other.gameObject.CompareTag ("Pickup Green")) 
+		{
+			AudioSource.PlayClipAtPoint(pu[PlayerManager.Get().stats.Green], Camera.main.transform.position);
+			Other.gameObject.SetActive(false);
+			PlayerManager.Get().stats.Green += 1;
+		}
+		//used to restart level once player falls in pit.
+		if (Other.gameObject.CompareTag ("Respawn"))
 		{
 			SceneManager.LoadScene(Scene);
 		}
+		/* restarts level once player hits an enemy, will either get rid of this or redefine what it does
+		 * so that it doesn't match the function of respawn.
+		 */
 		if (Other.gameObject.CompareTag("Enemy"))
 		{
 			SceneManager.LoadScene(Scene);
@@ -153,7 +166,11 @@ public class PlayerController : MonoBehaviour
 	}
 	void OnTriggerStay (Collider Other)
 	{
-		if (Other.gameObject.CompareTag("Wind"))
+		/* used for a constant wind effect from the fans in World 4, different tags are for different
+		 * directions. If possible, change this to rely only on 1 tag and use the rotation of the fan 
+		 * instead for executing different directions (same for chargepads) [173-189].
+		*/
+		if (Other.gameObject.CompareTag("Wind")) //WindLeft
 		{
 			rb.AddForce(new Vector3(-500, 0, 0));
 		}
@@ -178,7 +195,7 @@ public class PlayerController : MonoBehaviour
 		 * and V_Move ints to move the player in their assigned direction.
 		 * H_Move: -1 = left, 0 = N/A, 1 = Right.
 		 * V_Move: -1 = Back, 0 = N/A, 1 = Forward.
-		 * onCharge is also set to true to enable the charge to initiate on 'Z' press.
+		 * onCharge is also set to true to enable the charge to initiate on 'Z' press. [201-227]
 		*/
 
 		if (Other.gameObject.CompareTag("Charge Pad Up")) //ChargePad01
@@ -209,6 +226,7 @@ public class PlayerController : MonoBehaviour
 			V_Move = 0;
 			CP = Other.gameObject.transform.position;
 		}
+		// Used for returning jump on collision with 'Ground' tagged objects [230-233].
 		if (Other.gameObject.CompareTag("Ground"))
 		{
 			canJump = true;
@@ -220,35 +238,39 @@ public class PlayerController : MonoBehaviour
 		if (Other.gameObject.tag.Contains("Charge Pad")) //ChargePad05
 		{
 			onCharge = false;
-					CP =new Vector3(0, 10, 0);
+			CP =new Vector3(0, 0, 0);
 		}
 	}
-    public void resumeback()    //Unpauses the game
-    {
-        canvas.gameObject.SetActive(false);
-        Time.timeScale = 1;
-    }
 
-    public void LevelSelectPress()       //Active quit menu and disactive Resume and level select buttons
-    {
-        quitMenu.gameObject.SetActive(true);
-        resume.enabled = false;
-        exit.enabled = false;
-    }
-
-    public void NoPress()       //Disactive quit menu and reactive Resume and level select buttons
-    {
-        quitMenu.gameObject.SetActive(false);
-        resume.enabled = true;
-        exit.enabled = true;
-    }
-    public void YesPress()      //Loads the level select scene
-    {
-        SceneManager.LoadScene("LevelSelect");
+	/* UI Buttons call upon these 'voids' when they are clicked, the Resume and Level Select Buttons are prompted
+	 * via the 'Cancel' input while the 'Yes' and 'No' buttons are prompted on Level select being clicked [248-271].
+	 */
+	public void resumeback()    //Unpauses the game when Resume button is pressed, alternative to input 'cancel'.
+	{
+		canvas.gameObject.SetActive(false);
 		Time.timeScale = 1;
-    }
-    //this co-routine dictates when the player can move again after using the charge [195-206].
-    private IEnumerator ChargeRoutine()
+	}
+
+	public void LevelSelectPress() //activates 'Are you sure?' UI and disables resume and Level select.
+	{
+		quitMenu.gameObject.SetActive(true);
+		resume.enabled = false;
+		exit.enabled = false;
+	}
+
+	public void NoPress() //If No is selected for 'Are you sure?' UI, said UI is deactivated and previous buttons are re-enabled.
+	{
+		quitMenu.gameObject.SetActive(false);
+		resume.enabled = true;
+		exit.enabled = true;
+	}
+	public void YesPress()  //if Yes is selected, 'LevelSelect' Scene is loaded and timescale is set back to 1.
+	{
+		SceneManager.LoadScene("LevelSelect");
+		Time.timeScale = 1;
+	}
+	//this co-routine dictates when the player can move again after using the charge [273-284].
+	private IEnumerator ChargeRoutine()
 	{
 		yield return new WaitForSeconds(chargeDelay); //how long until the player can move again.
 		//all movement is given back to the player.
