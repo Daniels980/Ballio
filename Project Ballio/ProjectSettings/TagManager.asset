@@ -18,6 +18,8 @@ TagManager:
   - Wind
   - Sand
   - WindUp
+  - WindForward
+  - WindRight
   layers:
   - Default
   - TransparentFX

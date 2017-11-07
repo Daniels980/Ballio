@@ -3475,6 +3475,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bea444ee3858f6f4a9e6f9006786ccc6, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bea444ee3858f6f4a9e6f9006786ccc6, type: 3}
   m_IsPrefabParent: 0
@@ -6269,7 +6273,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 186f3e377613b8141932d2559109bf7b, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Respawn
       objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: 186f3e377613b8141932d2559109bf7b, type: 3}
       propertyPath: m_Materials.Array.data[0]

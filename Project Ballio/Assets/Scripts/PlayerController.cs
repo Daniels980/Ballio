@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+	public float CPHeight;      //used for testing the height the ball needs to be at for the charge pad
+	public float crUp;
+
 	public float speed;         //Speed the player is moving at.
 	public float B_speed;       //B_speed and B_jumpSpeed are used to restore speed and jumpSpeed to there original values. 
 	public float jumpSpeed;     //Intensity of player's jump.
@@ -62,6 +65,12 @@ public class PlayerController : MonoBehaviour
 			speed = B_speed;
 			jumpSpeed = B_jumpSpeed;
 		}
+
+		if (Input.GetKeyDown(KeyCode.Alpha1))
+			Time.timeScale = Time.timeScale - 0.1f;
+		if (Input.GetKeyDown(KeyCode.Alpha2))
+			Time.timeScale = Time.timeScale + 0.1f;
+
 		/* uses chargeDown to lower the value of charge when not charging and
 		 * sets lowest possible value of charge to 0 to avoid negative values [68-69]. 
 		 */
@@ -70,6 +79,7 @@ public class PlayerController : MonoBehaviour
 	}
 	void FixedUpdate()
 	{
+
 		float moveHorizontal = Input.GetAxis("Horizontal"); //MoveH
 		float moveVertical = Input.GetAxis("Vertical");     //MoveV
 
@@ -101,7 +111,8 @@ public class PlayerController : MonoBehaviour
 		 */
 		if (Input.GetButton("Jump") && canJump) //Jump01
 		{
-			rb.AddForce(Vector3.up * jumpSpeed); 
+			//rb.AddForce(Vector3.up * jumpSpeed);//AddForce is inconsistent, velocity will be used for jump and charge instead.
+			rb.velocity = (Vector3.up * jumpSpeed); // AF:V = 250:1.65 Ratio
 			canJump = false;            //we have jumped so dont let us do it again in the air
 		}
 		/* checks if player is pressing 'Fire1' and is on a charge pad, if true then the
@@ -114,7 +125,7 @@ public class PlayerController : MonoBehaviour
 			speed = 0;
 			jumpSpeed = 0;
 			charge = charge + chargeUp;
-			transform.position = CP + new Vector3 (0, 0.56f, 0);
+			transform.position = CP + new Vector3 (0, CPHeight, 0);
 			if (charge >= chargeMax) charge = chargeMax;
 		}
 		/*checks if player released 'Fire1' and is on charge pad, if true then AddForce is
@@ -124,7 +135,8 @@ public class PlayerController : MonoBehaviour
 		*/
 		if (Input.GetButtonUp("Fire1") && onCharge) //Charge04
 		{
-			rb.AddForce(new Vector3(charge * (10 * H_Move), -5, charge * (10 * V_Move)));
+			//rb.AddForce(new Vector3(charge * (10 * H_Move), -5, charge * (10 * V_Move)));
+			rb.velocity = new Vector3(charge * H_Move, crUp, charge * V_Move);
 			StartCoroutine(ChargeRoutine());
 			charging = false;
 		}
@@ -156,13 +168,7 @@ public class PlayerController : MonoBehaviour
 		{
 			SceneManager.LoadScene(Scene);
 		}
-		/* restarts level once player hits an enemy, will either get rid of this or redefine what it does
-		 * so that it doesn't match the function of respawn.
-		 */
-		if (Other.gameObject.CompareTag("Enemy"))
-		{
-			SceneManager.LoadScene(Scene);
-		}
+
 	}
 	void OnTriggerStay (Collider Other)
 	{

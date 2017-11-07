@@ -208,14 +208,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef04a2454b7d7f41ba9462af6106a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CPHeight: 0
+  crUp: 0
   speed: 160
   B_speed: 160
-  jumpSpeed: 2500
-  B_jumpSpeed: 2500
+  jumpSpeed: 16.5
+  B_jumpSpeed: 16.5
   Scene: 
   chargeDelay: 0
-  chargeMax: 1500
-  chargeUp: 20
+  chargeMax: 300
+  chargeUp: 300
   chargeDown: 25
   quitMenu: {fileID: 0}
   canvas: {fileID: 0}
