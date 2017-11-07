@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 54590925426744806}
   - component: {fileID: 114313547731211752}
   - component: {fileID: 82092797411087708}
+  - component: {fileID: 82928284603522040}
   m_Layer: 0
   m_Name: Golfball
   m_TagString: Player
@@ -180,6 +181,86 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &82928284603522040
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062391352553340}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a9a381e849115884b8ad755e3cd41e94, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95094867920486268
 Animator:
   serializedVersion: 3
@@ -210,10 +291,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CPHeight: 0
   crUp: 0
-  speed: 160
-  B_speed: 160
-  jumpSpeed: 16.5
-  B_jumpSpeed: 16.5
+  speed: 155
+  B_speed: 155
+  jumpSpeed: 17
+  B_jumpSpeed: 17
   Scene: 
   chargeDelay: 0
   chargeMax: 300
@@ -223,7 +304,17 @@ MonoBehaviour:
   canvas: {fileID: 0}
   resume: {fileID: 0}
   exit: {fileID: 0}
-  pu: []
+  pu:
+  - {fileID: 8300000, guid: 89040710b6b73e342831ba64fd555e6d, type: 3}
+  - {fileID: 8300000, guid: b3f8d8c31feda634c9c855a666d845cf, type: 3}
+  - {fileID: 8300000, guid: b7c77acd036f38f45befbef28c5f368b, type: 3}
+  - {fileID: 8300000, guid: b0146dc2d27eb77439da307854c59419, type: 3}
+  - {fileID: 8300000, guid: f3bf1c0e3635adb42b8c0e823d9c7ec0, type: 3}
+  - {fileID: 8300000, guid: 57851799a033c86499b4d796e86c3641, type: 3}
+  - {fileID: 8300000, guid: 1a4a000e7fd069046ad13f5e517cedfc, type: 3}
+  - {fileID: 8300000, guid: 7244d500df9922648ba46cdbff7d70a1, type: 3}
+  - {fileID: 8300000, guid: db1c7cf1c4dc52d429a9521cafc674bf, type: 3}
+  - {fileID: 8300000, guid: d5742fbf98481474a8a5132e8012b0d5, type: 3}
 --- !u!135 &135896979592084266
 SphereCollider:
   m_ObjectHideFlags: 1
