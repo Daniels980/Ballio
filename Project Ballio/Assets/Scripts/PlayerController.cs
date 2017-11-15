@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
 			speed = B_speed;
 			jumpSpeed = B_jumpSpeed;
 		}
-
+        //debugging
 		if (Input.GetKeyDown(KeyCode.Alpha1))
 			Time.timeScale = Time.timeScale - 0.1f;
 		if (Input.GetKeyDown(KeyCode.Alpha2))
