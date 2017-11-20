@@ -20,6 +20,8 @@ TagManager:
   - WindUp
   - WindForward
   - WindRight
+  - Enemy
+  - ToyGate
   layers:
   - Default
   - TransparentFX

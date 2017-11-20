@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
 			speed = B_speed;
 			jumpSpeed = B_jumpSpeed;
 		}
-        //debugging
+		//debugging
 		if (Input.GetKeyDown(KeyCode.Alpha1))
 			Time.timeScale = Time.timeScale - 0.1f;
 		if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -150,6 +150,12 @@ public class PlayerController : MonoBehaviour
 		 * and plays audio clip in 'pu' array that equals the current number of pickups had before collision 
 		 * (e.g. pu[0] plays if player has picked up 0 yellow flags) same is applied to green pickups[141-146].
 		 */
+		if (Other.gameObject.CompareTag("Pickup Red"))
+		{
+			AudioSource.PlayClipAtPoint(pu[PlayerManager.Get().stats.Red], Camera.main.transform.position);
+			Other.gameObject.SetActive(false);
+			PlayerManager.Get().stats.Red += 1;
+		}
 		if (Other.gameObject.CompareTag("Pickup Yellow"))
 		{
 			AudioSource.PlayClipAtPoint(pu[PlayerManager.Get().stats.Yellow], Camera.main.transform.position);
