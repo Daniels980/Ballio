@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Level_2.1.unity
+- path: Assets/_Scenes/Final Asset Showcase.unity
   isLoaded: 1
   isActive: 1
