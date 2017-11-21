@@ -19076,6 +19076,16 @@ Prefab:
       propertyPath: pu.Array.data[9]
       value: 
       objectReference: {fileID: 8300000, guid: d5742fbf98481474a8a5132e8012b0d5, type: 3}
+    - target: {fileID: 114313547731211752, guid: 3bc4e59003ef7674c9cb62d1da707af7,
+        type: 2}
+      propertyPath: pausemenu
+      value: 
+      objectReference: {fileID: 1295555030}
+    - target: {fileID: 114313547731211752, guid: 3bc4e59003ef7674c9cb62d1da707af7,
+        type: 2}
+      propertyPath: levelSelect
+      value: 
+      objectReference: {fileID: 924834144}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bc4e59003ef7674c9cb62d1da707af7, type: 2}
   m_IsPrefabParent: 0

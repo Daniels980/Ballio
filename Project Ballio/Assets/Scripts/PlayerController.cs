@@ -30,9 +30,9 @@ public class PlayerController : MonoBehaviour
 	private int V_Move;         //Used to determine which way Vertically the Charge Pad will move the player.
 
 	public Transform quitMenu;  //Gets the Quitmenu canvas component 
-	public Transform canvas;    //Gets the Pausemenu canvas component 
+	public Transform pausemenu;    //Gets the Pausemenu canvas component 
 	public Button resume;       //Gets the Resume button component 
-	public Button exit;         //Gets the Exit button component 
+	public Button levelSelect;         //Gets the Exit button component 
 
 	public AudioClip[] pu; //Get the Pick up sound component
 
@@ -93,14 +93,14 @@ public class PlayerController : MonoBehaviour
 		 */ 
 		if (Input.GetButtonDown("Cancel")) // Pause01
 		{
-			if (canvas.gameObject.activeInHierarchy == false)
+			if (pausemenu.gameObject.activeInHierarchy == false)
 			{
-				canvas.gameObject.SetActive(true);
+				pausemenu.gameObject.SetActive(true);
 				Time.timeScale = 0;
 			}
 			else
 			{
-				canvas.gameObject.SetActive(false);
+				pausemenu.gameObject.SetActive(false);
 				Time.timeScale = 1;
 			}
 		}
@@ -188,7 +188,7 @@ public class PlayerController : MonoBehaviour
 		}
 		if (Other.gameObject.CompareTag("WindUp"))
 		{
-			rb.AddForce(new Vector3(0, 50, 0));
+			rb.AddForce(new Vector3(0, 500, 0));
 		}
 		if (Other.gameObject.CompareTag("WindForward"))
 		{
@@ -259,7 +259,7 @@ public class PlayerController : MonoBehaviour
 	 */
 	public void resumeback()    //Unpauses the game when Resume button is pressed, alternative to input 'cancel'.
 	{
-		canvas.gameObject.SetActive(false);
+		pausemenu.gameObject.SetActive(false);
 		Time.timeScale = 1;
 	}
 
@@ -267,14 +267,14 @@ public class PlayerController : MonoBehaviour
 	{
 		quitMenu.gameObject.SetActive(true);
 		resume.enabled = false;
-		exit.enabled = false;
+		levelSelect.enabled = false;
 	}
 
 	public void NoPress() //If No is selected for 'Are you sure?' UI, said UI is deactivated and previous buttons are re-enabled.
 	{
 		quitMenu.gameObject.SetActive(false);
 		resume.enabled = true;
-		exit.enabled = true;
+		levelSelect.enabled = true;
 	}
 	public void YesPress()  //if Yes is selected, 'LevelSelect' Scene is loaded and timescale is set back to 1.
 	{

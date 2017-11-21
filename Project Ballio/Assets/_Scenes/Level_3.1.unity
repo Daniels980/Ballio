@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1.52
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d9641ee016881a044bf0f1bb70330620, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -152,6 +152,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.08965492
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -197,6 +212,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.034482718
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -245,7 +275,7 @@ Transform:
   m_LocalScale: {x: 60, y: 1, z: 85.49999}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.00001}
 --- !u!1 &117692724 stripped
 GameObject:
@@ -263,90 +293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf67c5853f93f244a0ca8e839e1df2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 0}
+  Door: {fileID: 117692724}
   Post: {fileID: 123515330}
---- !u!1 &120159318
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 120159322}
-  - component: {fileID: 120159321}
-  - component: {fileID: 120159320}
-  - component: {fileID: 120159319}
-  m_Layer: 0
-  m_Name: DJ
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &120159319
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 120159318}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 6bf7dbbb4b90ad24985f36750dc6da80, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!65 &120159320
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 120159318}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &120159321
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 120159318}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &120159322
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 120159318}
-  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0.000000029802322}
-  m_LocalPosition: {x: -0.9399991, y: 4.889999, z: 14.88916}
-  m_LocalScale: {x: 19.95201, y: 8.723309, z: 2.2532363}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180.00002}
 --- !u!1 &120351180 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1601999357508154, guid: 9976c6a66784c584ba39258204c054e7,
@@ -363,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf67c5853f93f244a0ca8e839e1df2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 0}
+  Door: {fileID: 120351180}
   Post: {fileID: 937883450}
 --- !u!1 &123515330 stripped
 GameObject:
@@ -412,6 +360,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.91724133
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -469,6 +432,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.1586206
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -520,6 +498,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.9862069
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -544,7 +537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &218573133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,7 +570,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 
 --- !u!222 &218573134
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -645,6 +638,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.19999981
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -695,6 +703,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.84827614
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -807,6 +830,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.9862069
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -867,6 +905,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.76551723
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -960,7 +1013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf67c5853f93f244a0ca8e839e1df2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 0}
+  Door: {fileID: 385795636}
   Post: {fileID: 2045321832}
 --- !u!4 &388046265 stripped
 Transform:
@@ -1025,7 +1078,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1384227762}
+      objectReference: {fileID: 0}
     - target: {fileID: 114498404671162412, guid: 4122f6724ada6f14381691d201fc3f8d,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1035,7 +1088,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1384227762}
+      objectReference: {fileID: 0}
     - target: {fileID: 114743231570534468, guid: 4122f6724ada6f14381691d201fc3f8d,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1045,7 +1098,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1384227762}
+      objectReference: {fileID: 0}
     - target: {fileID: 114539406816103736, guid: 4122f6724ada6f14381691d201fc3f8d,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1060,32 +1113,50 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1384227762}
+      objectReference: {fileID: 0}
+    - target: {fileID: 114144144697221750, guid: 4122f6724ada6f14381691d201fc3f8d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114144144697221750, guid: 4122f6724ada6f14381691d201fc3f8d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelSelectPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 114404563688896646, guid: 4122f6724ada6f14381691d201fc3f8d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114404563688896646, guid: 4122f6724ada6f14381691d201fc3f8d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: resumeback
+      objectReference: {fileID: 0}
+    - target: {fileID: 114106073062819686, guid: 4122f6724ada6f14381691d201fc3f8d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114106073062819686, guid: 4122f6724ada6f14381691d201fc3f8d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: YesPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 114881240831998952, guid: 4122f6724ada6f14381691d201fc3f8d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114881240831998952, guid: 4122f6724ada6f14381691d201fc3f8d,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NoPress
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4122f6724ada6f14381691d201fc3f8d, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &430872319 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114095788636368990, guid: 4122f6724ada6f14381691d201fc3f8d,
-    type: 2}
-  m_PrefabInternal: {fileID: 430872318}
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &430872320 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114539406816103736, guid: 4122f6724ada6f14381691d201fc3f8d,
-    type: 2}
-  m_PrefabInternal: {fileID: 430872318}
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!224 &430872321 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224081458965957938, guid: 4122f6724ada6f14381691d201fc3f8d,
-    type: 2}
-  m_PrefabInternal: {fileID: 430872318}
---- !u!224 &430872322 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224753478032958772, guid: 4122f6724ada6f14381691d201fc3f8d,
-    type: 2}
-  m_PrefabInternal: {fileID: 430872318}
 --- !u!1001 &441686438
 Prefab:
   m_ObjectHideFlags: 0
@@ -1128,6 +1199,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.9586208
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -1215,6 +1301,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -1261,6 +1362,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.76551723
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -1295,7 +1411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6e0848ff84d694c805ea106848b560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1384227761}
+  player: {fileID: 2057719807}
 --- !u!81 &565661828
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1360,11 +1476,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 565661826}
   m_LocalRotation: {x: 0.2897549, y: -0, z: -0, w: 0.95710087}
-  m_LocalPosition: {x: -0.78, y: 5.46, z: -13.21}
+  m_LocalPosition: {x: -0.78, y: 9.3, z: -17.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 33.687, y: 0, z: 0}
 --- !u!4 &577334502 stripped
 Transform:
@@ -1413,6 +1529,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.93103504
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -1465,6 +1596,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -1511,6 +1657,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.91724133
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -1551,7 +1712,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4133573335001398, guid: 9976c6a66784c584ba39258204c054e7, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1985115350582166, guid: 9976c6a66784c584ba39258204c054e7, type: 2}
       propertyPath: m_Name
@@ -1628,6 +1789,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.97241366
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -1679,6 +1855,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -1698,7 +1889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &695854110
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1793,6 +1984,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.21379304
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -1853,7 +2059,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4133573335001398, guid: 9976c6a66784c584ba39258204c054e7, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1985115350582166, guid: 9976c6a66784c584ba39258204c054e7, type: 2}
       propertyPath: m_Name
@@ -1907,7 +2113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &789056425
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2113,6 +2319,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -2158,6 +2379,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.21379304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -2253,7 +2489,7 @@ Transform:
   - {fileID: 941429656}
   - {fileID: 1821803663}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &846356923
 Prefab:
@@ -2292,7 +2528,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4133573335001398, guid: 9976c6a66784c584ba39258204c054e7, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1985115350582166, guid: 9976c6a66784c584ba39258204c054e7, type: 2}
       propertyPath: m_Name
@@ -2359,6 +2595,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.11724138
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -2387,7 +2638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &882933132
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2531,6 +2782,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.11724138
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -2576,6 +2842,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -2638,13 +2919,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 914074016}
-  m_LocalRotation: {x: 0.44379485, y: -0.2388603, z: 0.099664666, w: 0.8579387}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: -0.6321776, y: -0.18962376, z: -0.17287363, w: 0.73110133}
+  m_LocalPosition: {x: 0, y: 12.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 54.009003, y: -33.155003, z: -4}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -98.13699, y: 155.499, z: -185.28}
 --- !u!1001 &921543582
 Prefab:
   m_ObjectHideFlags: 0
@@ -2687,6 +2968,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -2740,7 +3036,7 @@ Transform:
   m_LocalScale: {x: 60, y: 1, z: 60}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: -90.00001}
 --- !u!1 &980171166
 GameObject:
@@ -2855,6 +3151,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.84827566
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -2901,6 +3212,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.8068962
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -2920,7 +3246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf67c5853f93f244a0ca8e839e1df2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 0}
+  Door: {fileID: 1020680497}
   Post: {fileID: 1944290162}
 --- !u!1001 &1025945610
 Prefab:
@@ -2965,8 +3291,81 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1026676336
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4045337688256144, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045337688256144, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045337688256144, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -6.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045337688256144, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045337688256144, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045337688256144, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045337688256144, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045337688256144, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1619527966893242, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
+      propertyPath: m_Name
+      value: Disco Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045337688256144, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045337688256144, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045337688256144, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 04b7fdfaea393864ba7deb5b106158ee, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1059147015 stripped
 Transform:
@@ -3021,6 +3420,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.84827566
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -3072,6 +3486,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.9862069
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -3114,8 +3543,24 @@ Transform:
   m_LocalScale: {x: 60, y: 1, z: 60}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: -90.00001}
+--- !u!1 &1117465394 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100010, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+  m_PrefabInternal: {fileID: 2126939999}
+--- !u!65 &1117465395
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1117465394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6, y: 2.0056806, z: 3.0000005}
+  m_Center: {x: 0, y: 0.0028401616, z: 1.5000002}
 --- !u!1001 &1128348433
 Prefab:
   m_ObjectHideFlags: 0
@@ -3158,6 +3603,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.8068967
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -3205,6 +3665,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.07586192
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -3251,6 +3726,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.9724139
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -3293,6 +3783,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.93103445
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -3317,7 +3822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1209064243
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3412,6 +3917,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.7241378
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -3457,6 +3977,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.93103445
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -3520,7 +4055,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 693fe5f2f098b0a429a37c2a77c7e6b6, type: 2}
+  - {fileID: 2100000, guid: 2856eaf9c884bba448de2cd3222bf9a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3601,6 +4136,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.24137926
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -3647,6 +4197,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.006896496
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -3655,6 +4220,90 @@ Transform:
   m_PrefabParentObject: {fileID: 4395487558731736, guid: 77d14fa9b8d60104b98ab182425d1c62,
     type: 2}
   m_PrefabInternal: {fileID: 124996724}
+--- !u!1001 &1335245437
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 49.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000011403656
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.6785784
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.6785784
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.6785784
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1 &1335245438 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+  m_PrefabInternal: {fileID: 1335245437}
+--- !u!4 &1335245439 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
+  m_PrefabInternal: {fileID: 1335245437}
+--- !u!64 &1335245440
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1335245438}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 877adde2a6a19b645ac3248039129a4a, type: 3}
 --- !u!4 &1336280498 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4395487558731736, guid: 77d14fa9b8d60104b98ab182425d1c62,
@@ -3703,310 +4352,24 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.07586192
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1384227760
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_RootOrder
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1cdae4b1310ccb24990cdc7acf9a718b, type: 2}
-    - target: {fileID: 2300024, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 810eac3d6d6e51749ad98655233ac151, type: 2}
-    - target: {fileID: 2300026, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b0c4df147c7f7eb439dc5fc0f1f00421, type: 2}
-    - target: {fileID: 2300022, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fdf2c2b46aa469e4a9219087935368f8, type: 2}
-    - target: {fileID: 2300020, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 6d12047fb6a04394eaf8e8ba640dc5d8, type: 2}
-    - target: {fileID: 2300018, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f0c523a2cc0b74147852abb1272cc17a, type: 2}
-    - target: {fileID: 2300016, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1a5bec8618e5e2143a861b265b72e4f4, type: 2}
-    - target: {fileID: 2300014, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 87cbf61edc571e34197e80f919f722a9, type: 2}
-    - target: {fileID: 2300010, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c4b958a6b934349438f34f0be74bcac0, type: 2}
-    - target: {fileID: 2300008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5ecc4af8f68725341b301f292484644d, type: 2}
-    - target: {fileID: 2300006, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 922a2474447fcc44b9d01ba4f8ac4842, type: 2}
-    - target: {fileID: 2300004, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 215fb2e6b5da4a54481b53cc9210de3f, type: 2}
-    - target: {fileID: 2300002, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: bd4934f82af64e64a8951efd9ce61c92, type: 2}
-    - target: {fileID: 400016, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400016, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 100010, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100006, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100012, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300012, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0bdd26d63578c7e4a8652b4495c3726e, type: 2}
-    - target: {fileID: 100014, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100024, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100020, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100026, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100016, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100018, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100022, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100028, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 100008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.36
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-  m_IsPrefabParent: 0
---- !u!1 &1384227761 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100008, guid: 0c4ee137dd6f82e40919ff45cdb18a7b, type: 3}
-  m_PrefabInternal: {fileID: 1384227760}
---- !u!114 &1384227762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1384227761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ef04a2454b7d7f41ba9462af6106a84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 60
-  B_speed: 60
-  jumpSpeed: 1000
-  B_jumpSpeed: 1000
-  Scene: Level_3.1
-  chargeDelay: 0
-  chargeMax: 1500
-  chargeUp: 20
-  chargeDown: 25
-  quitMenu: {fileID: 430872322}
-  canvas: {fileID: 430872321}
-  resume: {fileID: 430872320}
-  exit: {fileID: 430872319}
---- !u!23 &1384227763
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1384227761}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!135 &1384227764
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1384227761}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.4760766
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1384227765
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1384227761}
-  serializedVersion: 2
-  m_Mass: 3
-  m_Drag: 0.3
-  m_AngularDrag: 3
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1384227768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1384227761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f3df32b57a8d8d4bbbc085d8a781446, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Combination: []
-  Buttons:
-  - R
-  - B
-  - Y
-  - G
-  Guess:
-  - Z
-  - Z
-  - Z
-  - Z
-  Door: {fileID: 120159318}
-  Scene: Level_3.1
 --- !u!1 &1388616839
 GameObject:
   m_ObjectHideFlags: 0
@@ -4124,6 +4487,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.95862055
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -4169,6 +4547,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.95862055
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -4226,6 +4619,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.9724138
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -4277,6 +4685,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.9724138
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -4323,6 +4746,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.986207
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -4368,6 +4806,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.07586241
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -4425,6 +4878,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.95862055
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -4475,6 +4943,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.21379304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -4587,7 +5070,7 @@ RectTransform:
   - {fileID: 1626704402}
   - {fileID: 218573135}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4637,6 +5120,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.08965492
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -4656,7 +5154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1626704400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4689,7 +5187,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 
 --- !u!222 &1626704401
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4815,7 +5313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1670962799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4848,7 +5346,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: 
 --- !u!222 &1670962800
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4970,6 +5468,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1891282970072840, guid: 399b26bd01b328c4193700e31c6e1d84, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 399b26bd01b328c4193700e31c6e1d84, type: 2}
   m_IsPrefabParent: 0
@@ -5026,6 +5528,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.8896551
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -5073,7 +5590,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 693fe5f2f098b0a429a37c2a77c7e6b6, type: 2}
+  - {fileID: 2100000, guid: 2856eaf9c884bba448de2cd3222bf9a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5154,6 +5671,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -5200,6 +5732,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.07586217
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -5219,7 +5766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1736340300
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5276,6 +5823,10 @@ Transform:
   m_PrefabParentObject: {fileID: 4133573335001398, guid: 9976c6a66784c584ba39258204c054e7,
     type: 2}
   m_PrefabInternal: {fileID: 1787608206}
+--- !u!1 &1755808146 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+  m_PrefabInternal: {fileID: 2126939999}
 --- !u!1001 &1766655301
 Prefab:
   m_ObjectHideFlags: 0
@@ -5318,6 +5869,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.9586208
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -5365,6 +5931,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -5407,7 +5988,7 @@ Transform:
   m_LocalScale: {x: 60, y: 1, z: 68.99999}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.00001}
 --- !u!1001 &1787608206
 Prefab:
@@ -5446,7 +6027,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4133573335001398, guid: 9976c6a66784c584ba39258204c054e7, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1985115350582166, guid: 9976c6a66784c584ba39258204c054e7, type: 2}
       propertyPath: m_Name
@@ -5508,6 +6089,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.94482756
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -5554,6 +6150,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.0068967342
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -5599,6 +6210,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.9586208
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -5700,7 +6326,7 @@ RectTransform:
   - {fileID: 789056425}
   - {fileID: 1209064243}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 40.628002, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5750,6 +6376,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.97241366
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -5795,6 +6436,21 @@ Prefab:
     - target: {fileID: 1463792808936410, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
       propertyPath: m_Name
       value: Discopads (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.9724139
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
@@ -5842,7 +6498,7 @@ Transform:
   - {fileID: 1301487322}
   - {fileID: 1698554443}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1978698991
 GameObject:
@@ -5952,6 +6608,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -6003,6 +6674,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.55862045
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -6016,49 +6702,94 @@ GameObject:
   m_PrefabParentObject: {fileID: 1921542143816486, guid: 9976c6a66784c584ba39258204c054e7,
     type: 2}
   m_PrefabInternal: {fileID: 846356923}
+--- !u!1 &2057719807 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1619527966893242, guid: 04b7fdfaea393864ba7deb5b106158ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 1026676336}
+--- !u!114 &2057719813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057719807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3df32b57a8d8d4bbbc085d8a781446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Buttons:
+  - R
+  - B
+  - Y
+  - G
+  Guess:
+  - Z
+  - Z
+  - Z
+  - Z
+  Door: {fileID: 1755808146}
+  Scene: Level_3.1
 --- !u!1001 &2086663787
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1335245439}
     m_Modifications:
     - target: {fileID: 4929119224875398, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.860918
+      value: -0.016903
       objectReference: {fileID: 0}
     - target: {fileID: 4929119224875398, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.9
+      value: -0.12396962
       objectReference: {fileID: 0}
     - target: {fileID: 4929119224875398, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 48.66
+      value: 0.2885492
       objectReference: {fileID: 0}
     - target: {fileID: 4929119224875398, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.000000011403656
       objectReference: {fileID: 0}
     - target: {fileID: 4929119224875398, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7071069
       objectReference: {fileID: 0}
     - target: {fileID: 4929119224875398, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: 4929119224875398, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4929119224875398, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114545434114792902, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195,
         type: 2}
       propertyPath: NextLevel
       value: LevelSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929119224875398, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.14760238
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929119224875398, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.14760228
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929119224875398, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.14760228
+      objectReference: {fileID: 0}
+    - target: {fileID: 23987889643862050, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 114fdf0cfbfb9c84ba6706aa4d5a2195, type: 2}
@@ -6106,6 +6837,21 @@ Prefab:
       propertyPath: m_Name
       value: Discopads (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.9724138
+      objectReference: {fileID: 0}
+    - target: {fileID: 108193696100861460, guid: 77d14fa9b8d60104b98ab182425d1c62,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 77d14fa9b8d60104b98ab182425d1c62, type: 2}
   m_IsPrefabParent: 0
@@ -6114,3 +6860,65 @@ Transform:
   m_PrefabParentObject: {fileID: 4395487558731736, guid: 77d14fa9b8d60104b98ab182425d1c62,
     type: 2}
   m_PrefabInternal: {fileID: 1025945610}
+--- !u!1001 &2126939999
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3499999
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.298054
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00000058114523
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.2842293
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.2842276
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.2842276
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300016, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bf7dbbb4b90ad24985f36750dc6da80, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6a6214768b5b7794587f62551da125f7, type: 3}
+  m_IsPrefabParent: 0

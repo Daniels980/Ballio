@@ -14662,6 +14662,16 @@ Prefab:
       propertyPath: exit
       value: 
       objectReference: {fileID: 1347317419}
+    - target: {fileID: 114313547731211752, guid: 3bc4e59003ef7674c9cb62d1da707af7,
+        type: 2}
+      propertyPath: pausemenu
+      value: 
+      objectReference: {fileID: 1058327002}
+    - target: {fileID: 114313547731211752, guid: 3bc4e59003ef7674c9cb62d1da707af7,
+        type: 2}
+      propertyPath: levelSelect
+      value: 
+      objectReference: {fileID: 1347317419}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bc4e59003ef7674c9cb62d1da707af7, type: 2}
   m_IsPrefabParent: 0
@@ -21555,6 +21565,7 @@ MonoBehaviour:
   red: 0
   yellow: 0
   green: 1
+  Button: {fileID: 0}
 --- !u!65 &1413730281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31489,6 +31500,7 @@ MonoBehaviour:
   red: 0
   yellow: 0
   green: 1
+  Button: {fileID: 0}
 --- !u!95 &2090603645
 Animator:
   serializedVersion: 3

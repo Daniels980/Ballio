@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Combo : MonoBehaviour {
 
-    public string[] Combination;
     public string[] Buttons;
     public string[] Guess;
     private int X;
@@ -14,24 +13,16 @@ public class Combo : MonoBehaviour {
 
     public string Scene;
 
-    void Start()
-    {
-        X = 0;
-    }
-
-
     void Update()
     {
         if (X >= 4)
         {
             if (Guess[0] == "B" && Guess[1] == "G" && Guess[2] == "Y" && Guess[3] == "R")
             {
-                Debug.LogWarning("YOU WIN!");
                 Door.SetActive(false);
             }
             else
             {
-                Debug.LogWarning("YOU LOSE!");
                 SceneManager.LoadScene(Scene);
             }
         }

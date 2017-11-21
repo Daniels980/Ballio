@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114031817184841996}
   m_Layer: 0
   m_Name: Trashbag
-  m_TagString: Pick Up
+  m_TagString: Pickup Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
