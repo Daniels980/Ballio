@@ -23,7 +23,8 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
     }
     public virtual void OnPointerUp(PointerEventData PED)
     {
-
+        inputVector = Vector3.zero;
+        joyStick.rectTransform.anchoredPosition = Vector3.zero;
     }
     public virtual void OnDrag(PointerEventData PED)
     {
@@ -33,10 +34,27 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
             pos.x = (pos.x / BG.rectTransform.sizeDelta.x);
             pos.y = (pos.y / BG.rectTransform.sizeDelta.y);
 
-            inputVector = new Vector3(pos.x * 2 + 1, 0, pos.x * 2 - 1);
+            inputVector = new Vector3(pos.x * 2 - 1, 0, pos.y * 2);
+            inputVector = (inputVector.magnitude > 1.0f) ? inputVector.normalized : inputVector;
 
-            Debug.Log(pos);
+            joyStick.rectTransform.anchoredPosition = new Vector3(inputVector.x * (BG.rectTransform.sizeDelta.x / 3), inputVector.z * (BG.rectTransform.sizeDelta.y / 3));
+
+            Debug.Log(inputVector);
         }
 
+    }
+    public float Horizontal()
+    {
+        if (inputVector.x != 0)
+            return inputVector.x;
+        else
+            return Input.GetAxis("Horizontal");
+    }
+    public float Vertical()
+    {
+        if (inputVector.z != 0)
+            return inputVector.z;
+        else
+            return Input.GetAxis("Vertical");
     }
 }

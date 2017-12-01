@@ -11,8 +11,7 @@ public class FinalTime : MonoBehaviour
 	void Update ()
 	{
 		//this shows the final time achieved at the end of the level
-		TimeShow.text = "Your final time was: " + PlayerManager.Get().stats.Timer;
-		
-	}
+        TimeShow.text = "Your final time was: " + Mathf.Floor(PlayerManager.Get().stats.Timer / 60).ToString("0#") + ":" + (PlayerManager.Get().stats.Timer % 60).ToString("0#.00");
+    }
 
 }

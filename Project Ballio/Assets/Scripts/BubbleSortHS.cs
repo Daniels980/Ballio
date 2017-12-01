@@ -12,7 +12,7 @@ public class BubbleSortHS : MonoBehaviour
     private float S_Temp;  //Temporary float for swapping Scores during Bubble Sort.
     private string N_Temp; //Temporary float for swapping Names during Bubble Sort.
     private bool Checked; //Checks if last 'sort through' required any swaps. If not, sorting stops.
-    float PlayerScore = PlayerManager.Get().stats.Timer; //stats.timer freezes then updates on "final score" script. Stores current player's time.
+    //float PlayerScore = PlayerManager.Get().stats.Timer; //stats.timer freezes then updates on "final score" script. Stores current player's time.
 
     void Start()
     {

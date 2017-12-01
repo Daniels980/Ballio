@@ -7,27 +7,26 @@ using UnityEngine.UI;
 public class ButtonManager : MonoBehaviour 
 {
 
-    //this script is used on the start menu and game over menu. Using buttons and build settings you can seemlessly transition from scene to scene with this type of code.
+	//this script is used on the start menu and game over menu. Using buttons and build settings you can seemlessly transition from scene to scene with this type of code.
+	public Canvas quitMenu;         //Holds the quit canvas.
+	public Button startText;        //Holds the Start button
+	public Button exitText;         //Holds the Exit button
+	public Text inputText;
 
-    public Canvas quitMenu;         //Holds the quit canvas.
-    public Button startText;        //Holds the Start button
-    public Button exitText;         //Holds the Exit button
-    public Text inputText;
+	private void Start()    //Disables the Quit menu image and the child linked underneath it.
+	{
+		quitMenu.enabled = false;
+	}
 
-    private void Start()    //Disables the Quit menu image and the child linked underneath it.
-    {
-        quitMenu.enabled = false;
-    }
-
-    //loads the scene containing the gameplay when the applied button is clicked on. This is done by using the SceneManager class (13-16).
-    public void OnNewGame_Clicked() //ButtonNG
-    {
+	//loads the scene containing the gameplay when the applied button is clicked on. This is done by using the SceneManager class (13-16).
+	public void OnNewGame_Clicked() //ButtonNG
+	{
 		SceneManager.LoadScene("LevelSelect"); 
 	}
 
 	//loads the start menu scene when you press the main menu button in the Win scene. This is also done by using the SceneManager class (19-22).
 	public void OnMenu_Clicked()    //ButtonMenu
-    {
+	{
 		SceneManager.LoadScene ("StartMenu");
 	}
 
@@ -40,25 +39,25 @@ public class ButtonManager : MonoBehaviour
 
 	//Exits the game by using the Application class (26-28).
 	public void OnExit_Clicked() //Opens quit menu and disactivate Game start and exit button
-    {
-        quitMenu.enabled = true;
-        startText.enabled = false;
-        exitText.enabled = false;
-    }
+	{
+		quitMenu.enabled = true;
+		startText.enabled = false;
+		exitText.enabled = false;
+	}
 
-    public void NoPress()  //Redirect back to main menu and re actives game start and exit button
-    {
-        quitMenu.enabled = false;
-        startText.enabled = true;
-        exitText.enabled = true;
-    }
+	public void NoPress()  //Redirect back to main menu and re actives game start and exit button
+	{
+		quitMenu.enabled = false;
+		startText.enabled = true;
+		exitText.enabled = true;
+	}
 
-    public void YesPress()  //Exit Application
-    {
-        Application.Quit();
-    }
+	public void YesPress()  //Exit Application
+	{
+		Application.Quit();
+	}
 
-    public void OnOneOne_Clicked() //Loads and starts level 1 world 1 :D
+	public void OnOneOne_Clicked() //Loads and starts level 1 world 1 :D
 	{
 		SceneManager.LoadScene("Level_1.1");
 	}
@@ -118,10 +117,11 @@ public class ButtonManager : MonoBehaviour
 		SceneManager.LoadScene("Level_4.3");
 	}
 
-    public void OnEnter_Clicked()
-    {
-        PlayerManager.Get().stats.PlayerName = inputText.text; // Temp now equals the name the player submitted.
-        Debug.Log(PlayerManager.Get().stats.PlayerName);
-        SceneManager.LoadScene("HighScoreScene");
-    }
+	public void OnEnter_Clicked()
+	{
+		PlayerManager.Get().stats.PlayerName = inputText.text; // Temp now equals the name the player submitted.
+		Debug.Log(PlayerManager.Get().stats.PlayerName);
+		SceneManager.LoadScene("HighScoreScene");
+	}
+
 }

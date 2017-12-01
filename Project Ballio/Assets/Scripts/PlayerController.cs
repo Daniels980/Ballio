@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
 	public float CPHeight;      //used for testing the height the ball needs to be at for the charge pad
 	public float crUp;
 
+	//variables relating to android controls
+	public GameObject AndroidJump;   // used for toggling left click jump based on whether the jump UI is visible
+	public VirtualJoystick joystick; // used for Android joystick movement.
+
 	public float speed;         //Speed the player is moving at.
 	public float B_speed;       //B_speed and B_jumpSpeed are used to restore speed and jumpSpeed to there original values. 
 	public float jumpSpeed;     //Intensity of player's jump.
@@ -80,8 +84,11 @@ public class PlayerController : MonoBehaviour
 	void FixedUpdate()
 	{
 
-		float moveHorizontal = Input.GetAxis("Horizontal"); //MoveH
-		float moveVertical = Input.GetAxis("Vertical");     //MoveV
+		//float moveHorizontal = Input.GetAxis("Horizontal"); //MoveH
+		//float moveVertical = Input.GetAxis("Vertical");     //MoveV
+
+		float moveHorizontal = joystick.Horizontal(); //MoveH
+		float moveVertical = joystick.Vertical();     //MoveV
 
 		Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical); //Move01
 
@@ -109,7 +116,7 @@ public class PlayerController : MonoBehaviour
 		 * is set to false so the player can't jump again. Can jump becomes true again
 		 * when the player collides with the ground (which is tagged as 'Ground') [102-106].
 		 */
-		if (Input.GetButton("Jump") && canJump) //Jump01
+		if (Input.GetButton("Jump") && canJump && AndroidJump.activeInHierarchy == (false)) //Jump01
 		{
 			//rb.AddForce(Vector3.up * jumpSpeed);//AddForce is inconsistent, velocity will be used for jump and charge instead.
 			rb.velocity = (Vector3.up * jumpSpeed); // AF:V = 250:1.65 Ratio
@@ -280,6 +287,45 @@ public class PlayerController : MonoBehaviour
 	{
 		SceneManager.LoadScene("LevelSelect");
 		Time.timeScale = 1;
+	}
+	public void OnJump_Clicked()
+	{
+		if (canJump)
+		{
+			//rb.AddForce(Vector3.up * jumpSpeed);//AddForce is inconsistent, velocity will be used for jump and charge instead.
+			rb.velocity = (Vector3.up * jumpSpeed); // AF:V = 250:1.65 Ratio
+			canJump = false;                        //we have jumped so dont let us do it again in the air
+		}
+	}
+	public void OnCharge_Clicked()
+	{
+		if (onCharge)
+		{
+			charging = true;
+			speed = 0;
+			jumpSpeed = 0;
+			charge = charge + chargeUp;
+			transform.position = CP + new Vector3(0, CPHeight, 0);
+			if (charge >= chargeMax) charge = chargeMax;
+
+			//rb.AddForce(new Vector3(charge * (10 * H_Move), -5, charge * (10 * V_Move)));
+			rb.velocity = new Vector3(charge * H_Move, crUp, charge * V_Move);
+			StartCoroutine(ChargeRoutine());
+			charging = false;
+		}
+	}
+	public void OnPause_Clicked()
+	{
+		if (pausemenu.gameObject.activeInHierarchy == false)
+		{
+			pausemenu.gameObject.SetActive(true);
+			Time.timeScale = 0;
+		}
+		else
+		{
+			pausemenu.gameObject.SetActive(false);
+			Time.timeScale = 1;
+		}
 	}
 	//this co-routine dictates when the player can move again after using the charge [273-284].
 	private IEnumerator ChargeRoutine()
